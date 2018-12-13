@@ -106,7 +106,9 @@ char where_to_go(int head_x,int head_y,int food_position[2],int direction){
 1. 我的贪吃蛇界面一直在往下刷新，看不清楚，于是加入清屏的功能。
 
 ```c
-system("cls");
+system("cls");//win
+or
+printf("\033[2J")//linux
 ```
 
 修改后效果如图
