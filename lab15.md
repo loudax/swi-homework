@@ -89,7 +89,49 @@ char where_to_go(int head_x,int head_y,int food_position[2],int direction){
 }
 ```
 
-我看到网上关于智能蛇的代码有更好的更简便的方法，但碍于水平不够，我并没有看懂……于是写了一个很麻烦的函数，把蛇头的四个方向都进行了假设，也实现了判断往哪个方向走的功能。
+我看到网上关于智能蛇的代码有更好的更简便的方法，但碍于水平不够，我并没有看懂……于是写了一个很麻烦的函数，把蛇头的四个方向都进行了假设，也实现了判断往哪个方向走的功能。但这个是不符合作业要求中给出的伪代码的。按照作业要求中的伪代码，c语言应该如下，的确比我写的清楚简洁的多。
+
+```c
+char where_to_go(char map[12][12],int head_x,int head_y,int food_position[2]){
+	int distance[4]={0,0,0,0};
+	int dist_min;
+	if(map[head_y][head_x-1]!=BLANK_CELL){
+		distance[0] = abs(food_position[0]-(head_x-1)) + abs(food_position[1]-head_y);
+	}
+	else distance[0] = 9999;//a
+	if(map[head_y][head_x+1]!=BLANK_CELL){
+		distance[1] = abs(food_position[0]-(head_x+1)) + abs(food_position[1]-head_y);
+	}
+	else distance[1] = 9999;//d
+	if(map[head_y-1][head_x]!=BLANK_CELL){
+		distance[2] = abs(food_position[0]-head_x) + abs(food_position[1]-(head_y-1));
+	}
+	else distance[2] = 9999;//s
+	if(map[head_y+1][head_x]!=BLANK_CELL){
+		distance[3] = abs(food_position[0]-head_x) + abs(food_position[1]-(head_y+1));
+	}
+	else distance[3] = 9999;//w
+	dist_min = min(distance);
+	if(dist_min==0)
+	return 'a';
+	if(dist_min==1)
+	return 'd';
+	if(dist_min==2)
+	return 's';
+	if(dist_min==3)
+	return 'w';
+}
+
+int min(int distance[4]){
+	int min = 0, i;
+	for(i=1;i<4;i++){
+		if(distance[i]<distance[min]){
+			min = i;
+		}
+	}
+	return min;
+}
+```
 
 另一个麻烦接踵而至，linux上的操作令人头大。虽然有了2班学委的指导，成功安装上了配置好的虚拟机，但还是遇到了两个问题。
 
