@@ -18,7 +18,7 @@
 
 ![](https://raw.githubusercontent.com/loudax/Picture/master/%E5%B9%BF%E5%91%8A1.png)
 
-除了热搜里的广告，首页的广告更令人心烦，足以影响使用感。
+除了热搜里的广告，首页的广告更令人心烦，影响使用感。
 
 ### 2. 人肉搜索
 
