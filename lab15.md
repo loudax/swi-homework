@@ -6,7 +6,7 @@
 
 姓名：刘心怡 
 
-由普通贪吃蛇到智能蛇，只需要用一个where_to_go的函数决定该往哪里走来替代手动键入‘a’‘s’‘d’‘w’来决定方向。函数代码如下。
+由普通贪吃蛇到智能蛇，只需要用一个where_to_go的函数决定该往哪里走来替代手动键入‘a’‘s’‘d’‘w’来决定方向。函数代码如下。 
 
 ```c
 char where_to_go(int head_x,int head_y,int food_position[2],int direction){
