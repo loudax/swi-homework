@@ -101,7 +101,19 @@ char where_to_go(int head_x,int head_y,int food_position[2],int direction){
 
 ![](https://raw.githubusercontent.com/loudax/Picture/master/%E6%99%BA%E8%83%BD%E8%9B%87.gif)
 
-运行完毕后发现了一个问题，我的智能蛇还不够智能，它只能判断怎么走可以很快地接近食物，但没有判断这么走会不会撞到自己的蛇身。接下来会完善这一点。
+运行完毕后发现了两个问题：
+
+1. 我的贪吃蛇界面一直在往下刷新，看不清楚，于是加入清屏的功能。
+
+```c
+system("cls");
+```
+
+修改后效果如图
+
+![](https://raw.githubusercontent.com/loudax/Picture/master/%E6%B8%85%E5%B1%8F%202.gif)
+
+2. 我的智能蛇还不够智能，它只能判断怎么走可以很快地接近食物，但没有判断这么走会不会撞到自己的蛇身。接下来会完善这一点。
 
 思考：一个长度为5的障碍物能困死该自动跑的蛇吗？
 
